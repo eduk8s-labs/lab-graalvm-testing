@@ -8,7 +8,8 @@ spec:
   url: https://github.com/eduk8s-labs/lab-graalvm-testing
   content:
     image: ghcr.io/eduk8s-labs/eduk8s-labs/graalvm-environment@sha256:855bfc76adee12ed29f3c250ce13ef6b666599f57d8f3e6f8d4084337333624f
-    files: github.com/eduk8s-labs/lab-graalvm-testing
+    #files: github.com/eduk8s-labs/lab-graalvm-testing
+    files: imgpkg+https://ghcr.io/eduk8s-labs/eduk8s-labs/lab-graalvm-testing:latest
   session:
     namespaces:
       budget: medium
