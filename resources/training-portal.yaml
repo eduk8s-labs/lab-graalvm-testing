@@ -6,8 +6,12 @@ spec:
   portal:
     registration:
       type: anonymous
+    updates:
+      workshop: true
+    sessions:
+      maximum: 1
   workshops:
   - name: lab-graalvm-testing
-    capacity: 1
+    reserved: 0
     expires: 60m
-    orphaned: 5m
+    orphaned: 15m
