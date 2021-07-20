@@ -1,0 +1,22 @@
+name: Create content bundles
+
+on:
+  push:
+    branches: master
+
+jobs:
+  publish_workshop_bundle:
+    name: Create content bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Install imgpkg
+        shell: bash
+        run: |
+          wget -nv -O- https://github.com/vmware-tanzu/carvel-imgpkg/releases/download/v0.14.0/imgpkg-linux-amd64 > /tmp/imgpkg
+          chmod 755 /tmp/imgpkg
+      - name: Build and publish
+        shell: bash
+        run: |
+          /tmp/imgpkg push -i ghcr.io/eduk8s-labs/${{github.repository}}:latest -f . --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
