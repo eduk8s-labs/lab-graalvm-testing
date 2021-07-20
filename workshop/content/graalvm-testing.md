@@ -1,15 +1,15 @@
 ```terminal:execute
-command javac helloworld.java
+command: javac HelloWorld.java
 ```
 
 ```terminal:execute
-command: java helloworld
+command: java HelloWorld
 ```
 
 ```terminal:execute
-command: native-image helloworld
+command: native-image HelloWorld
 ```
 
 ```terminal:execute
-command: ./helloworld
+command: ./HelloWorld
 ```
