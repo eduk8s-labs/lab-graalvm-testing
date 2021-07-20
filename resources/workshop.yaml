@@ -7,7 +7,7 @@ spec:
   description: A sample workshop using Markdown
   url: https://github.com/eduk8s-labs/lab-graalvm-testing
   content:
-    image: ghcr.io/eduk8s-labs/eduk8s-labs/graalvm-environment:c11ea94c227238b2d9f5f97463983478819246f7
+    image: ghcr.io/eduk8s-labs/eduk8s-labs/graalvm-environment@sha256:855bfc76adee12ed29f3c250ce13ef6b666599f57d8f3e6f8d4084337333624f
     files: github.com/eduk8s-labs/lab-graalvm-testing
   session:
     namespaces:
