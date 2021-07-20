@@ -1,4 +1,4 @@
-FROM ghcr.io/eduk8s-labs/eduk8s-labs/graalvm-environment@sha256:855bfc76adee12ed29f3c250ce13ef6b666599f57d8f3e6f8d4084337333624f
+FROM ghcr.io/eduk8s-labs/eduk8s-labs/graalvm-environment@sha256:f10ce8d1ba361762380cece6c32d7b1205142ecb0c9f7d5da94aa46ccf33a91c
 
 COPY --chown=1001:0 . /home/eduk8s/
 
