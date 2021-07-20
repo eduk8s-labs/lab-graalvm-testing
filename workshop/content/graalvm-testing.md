@@ -11,5 +11,5 @@ command: native-image HelloWorld
 ```
 
 ```terminal:execute
-command: ./HelloWorld
+command: ./helloworld
 ```
