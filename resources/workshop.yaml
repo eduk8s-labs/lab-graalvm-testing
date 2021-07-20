@@ -1,20 +1,19 @@
 apiVersion: training.eduk8s.io/v1alpha2
 kind: Workshop
 metadata:
-  name: lab-markdown-sample
+  name: lab-graalvm-testing
 spec:
-  title: Markdown Sample
+  title: GraalVM Testing
   description: A sample workshop using Markdown
-  vendor: eduk8s.io
-  difficulty: beginner
-  duration: 15m
-  url: https://github.com/eduk8s/lab-markdown-sample
+  url: https://github.com/eduk8s-labs/lab-graalvm-testing
   content:
-    #image: quay.io/eduk8s/lab-markdown-sample:master
-    files: github.com/eduk8s/lab-markdown-sample
+    image: ghcr.io/eduk8s-labs/eduk8s-labs/graalvm-environment:c11ea94c227238b2d9f5f97463983478819246f7
+    files: github.com/eduk8s-labs/lab-graalvm-testing
   session:
     namespaces:
-      budget: small
+      budget: medium
+    resources:
+      memory: 4Gi
     applications:
       terminal:
         enabled: true
