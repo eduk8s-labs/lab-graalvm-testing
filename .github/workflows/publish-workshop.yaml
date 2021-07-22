@@ -5,9 +5,38 @@ on:
     branches: master
 
 jobs:
+  generate_maven_cache:
+    name: Generate maven cache
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: Install imgpkg
+        shell: bash
+        run: |
+          wget -nv -O- https://github.com/vmware-tanzu/carvel-imgpkg/releases/download/v0.14.0/imgpkg-linux-amd64 > /tmp/imgpkg
+          chmod 755 /tmp/imgpkg
+      - name: Download Java code
+        shell: bash
+        run: |
+          git clone -b 1.0 https://github.com/springone-tour-2021/color-app.git app-temp
+      - name: Generate dependencies
+        shell: bash
+        run: |
+          cd app-temp/blueorgreenservice && ./mvnw dependency:go-offline
+          cd ../blueorgreenfrontend && ./mvnw dependency:go-offline
+          cd ../blueorgreengateway && ./mvnw dependency:go-offline
+          cd ../authgateway && ./mvnw dependency:go-offline
+      - name: Build and publish
+        shell: bash
+        run: |
+          /tmp/imgpkg push -i ghcr.io/eduk8s-labs/${{github.repository}}-m2:latest -f $HOME/.m2 --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
+
   publish_workshop_bundle:
     name: Create content bundle
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
