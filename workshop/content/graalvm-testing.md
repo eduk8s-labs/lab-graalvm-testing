@@ -10,15 +10,8 @@ command: cd spring-native/samples/petclinic-jpa
 command: time mvn compile
 ```
 
-```terminal:exeucte
-command: time mvn package
-```
-
 ```terminal:execute
-command: mvn exec:java -Dexec.mainClass="org.springframework.samples.petclinic.PetClinicApplication"
-```
-
-```terminal:interupt
+command: time mvn package
 ```
 
 ```terminal:execute
