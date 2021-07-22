@@ -22,9 +22,5 @@ command: cd ~/exercises
 ```
 
 ```terminal:execute
-command: time native-image HelloWorld
-```
-
-```terminal:execute
-command: ./helloworld
+command: time -jar target/petclinic-jpa-0.0.1-SNAPSHOT.jar
 ```
