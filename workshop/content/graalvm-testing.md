@@ -18,9 +18,5 @@ command: java -jar target/petclinic-jpa-0.0.1-SNAPSHOT.jar
 ```
 
 ```terminal:execute
-command: cd ~/exercises
-```
-
-```terminal:execute
 command: time -jar target/petclinic-jpa-0.0.1-SNAPSHOT.jar
 ```
