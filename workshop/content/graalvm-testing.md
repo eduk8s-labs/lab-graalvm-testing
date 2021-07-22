@@ -7,7 +7,7 @@ command: cd spring-native/samples/petclinic-jpa
 ```
 
 ```terminal:execute
-command: time mvn package
+command: time mvn package -DskipTests
 ```
 
 ```terminal:execute
