@@ -25,19 +25,19 @@ jobs:
       - name: Generate dependencies 1
         shell: bash
         run: |
-          cd ~/app-temp/blueorgreenservice && ./mvnw dependency:go-offline
+          (cd app-temp/blueorgreenservice && ./mvnw dependency:go-offline)
       - name: Generate dependencies 2
         shell: bash
         run: |
-          cd ~/app-temp/blueorgreenfrontend && ./mvnw dependency:go-offline
+          (cd app-temp/blueorgreenfrontend && ./mvnw dependency:go-offline)
       - name: Generate dependencies 3
         shell: bash
         run: |
-          cd ~/app-temp/blueorgreengateway && ./mvnw dependency:go-offline
+          (cd app-temp/blueorgreengateway && ./mvnw dependency:go-offline)
       - name: Generate dependencies 4
         shell: bash
         run: |
-          cd ~/app-temp/authgateway && ./mvnw dependency:go-offline
+          (cd app-temp/authgateway && ./mvnw dependency:go-offline)
       - name: Build and publish
         shell: bash
         run: |
