@@ -18,5 +18,5 @@ command: java -jar target/petclinic-jpa-0.0.1-SNAPSHOT.jar
 ```
 
 ```terminal:execute
-command: time -jar target/petclinic-jpa-0.0.1-SNAPSHOT.jar
+command: time native-image -jar target/petclinic-jpa-0.0.1-SNAPSHOT.jar
 ```
