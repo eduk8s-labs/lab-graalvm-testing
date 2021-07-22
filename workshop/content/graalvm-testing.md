@@ -15,10 +15,10 @@ command: time mvn package
 ```
 
 ```terminal:execute
-command: java -jar petclinic-jpa-0.0.1-SNAPSHOT.jar
+command: java -jar target/petclinic-jpa-0.0.1-SNAPSHOT.jar
 ```
 
-```terminal:interupt
+```terminal:interrupt
 ```
 
 ```terminal:execute
