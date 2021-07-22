@@ -27,3 +27,6 @@ spec:
         enabled: true
       registry:
         enabled: true
+    env:
+      - name: MAVEN_CACHE_IMAGE
+        value: ghcr.io/eduk8s-labs/eduk8s-labs/lab-graalvm-testing-m2:latest
