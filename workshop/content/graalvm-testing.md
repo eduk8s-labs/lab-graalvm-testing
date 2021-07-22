@@ -7,10 +7,6 @@ command: cd spring-native/samples/petclinic-jpa
 ```
 
 ```terminal:execute
-command: time mvn compile
-```
-
-```terminal:execute
 command: time mvn package
 ```
 
